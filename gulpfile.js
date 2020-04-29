@@ -8,7 +8,7 @@ const files = {
     scssPath: 'src/scss/*.scss',
     jsPath: 'src/js/*.js',
     html: 'src/html/*.html',
-    svg: 'src/svg/.svg'
+    svg: 'src/svg/*.*'
 }
 
 function cssTask() {
@@ -23,7 +23,6 @@ function cssTask() {
 function jsTask() {
     return src(files.jsPath)
     .pipe(concat('main.js'))
-    .pipe(minifyJs())
     .pipe(dest('dist/js'))
 }
 
