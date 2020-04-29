@@ -87,6 +87,10 @@ header {
             transform: translateY(1px);
             border: 0;
         }
+        &:disabled {
+            background-color: gray;
+            cursor: default;
+        }
     }
 
 
