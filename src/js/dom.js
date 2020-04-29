@@ -15,11 +15,11 @@ const createBubble = ({id, bot, options}) => {
 
     setTimeout(function(){ 
         if(options) {
-            const bubblesOptions = options.map(({human, bot}) => {
+            const bubblesOptions = options.map(({human, bot, keep}) => {
                 const bubbleHuman = document.createElement('button')
                 bubbleHuman.innerHTML = human;
-                bubbleHuman.classList.add('bubble', 'human') 
-                bubbleHuman.onclick = function(){createBubble(script[bot]); scrollToBottom(bubblesBot[0].id)}
+                bubbleHuman.classList.add('bubble', 'human', 'option') 
+                bubbleHuman.onclick = function(){createBubble(script[bot]); bubbleHuman.classList.add('keep'); scrollToBottom(bubblesBot[0].id); bubbleHuman.disabled = true; hideOtherOptions()}
                 return bubbleHuman
             })
            displayBubbles(bubblesOptions)  
@@ -32,12 +32,23 @@ const createBubble = ({id, bot, options}) => {
 
 const displayBubbles = (bubbles) => {
     bubbles.forEach(bubble => {
-        setTimeout(function(){ container.appendChild(bubble); bubble.scrollIntoView() }, 1000)
+        setTimeout(function(){ container.appendChild(bubble); bubble.scrollIntoView() }, 500)
         
     })
 }
 
 const scrollToBottom = id => {
-    //ta erradissimo kkk
     document.getElementById(id).scrollIntoView();
 }
+
+const hideOtherOptions = _ => {
+    const options = document.querySelectorAll('.option');
+    const otherOptions = [...options].filter(option => {
+        return (!(option.classList.contains('keep')))
+    })
+
+    otherOptions.forEach(option => {
+        option.classList.add('d-none');
+    })
+}
+

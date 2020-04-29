@@ -3,7 +3,8 @@ const intro = {
     bot: ['Olá, eu sou ARIEL, seu mentor 👋. Eu estou aqui para te ajudar na sua jornada para se tornar uma desenvolvedora front-end.'],
     options: [{
         human: 'Legal, mas como exatamente você pode me ajudar? 🤔',
-        bot: 'how'
+        bot: 'how',
+        keep: false
     }]
 }
 
@@ -13,11 +14,13 @@ const how = {
 
     options: [{
             human: 'Vamos! 😃',
-            bot: 'go'
+            bot: 'go',
+            keep: false
         },
         {
             human: 'Talvez depois...',
-            bot: 'bye'
+            bot: 'bye',
+            keep: false
         }
     ]
 }
@@ -27,19 +30,23 @@ const go =  {
     bot: ['Perfeito! Agora diz pra mim, sobre o que você quer conversar?'],
     options: [{
             human: 'Tô precisando de motivação...',
-            bot: 'inspiration'
+            bot: 'inspiration',
+            keep: false
         },
         {
             human: 'Eu quero treinar minhas habilidades!',
-            bot: 'training'
+            bot: 'training',
+            keep: false
         },
         {
             human: 'Eu tenho uma dúvida técnica',
-            bot: 'tech'
+            bot: 'tech',
+            keep: false
         },
         {
             human: 'Por enquanto nada',
-            bot: 'bye'
+            bot: 'bye',
+            keep: false
         }
     ]
 }
@@ -49,15 +56,18 @@ const tech = {
     bot: ['Diz pra mim sobre o que é a sua dúvida'],
     options: [{
             human: 'CSS',
-            bot: 'css'
+            bot: 'css',
+            keep: false
         },
         {
             human: 'HTML',
-            bot: 'html'
+            bot: 'html',
+            keep: false
         },
         {
             human: 'Outra coisa...',
-            bot: 'something-else'
+            bot: 'something-else',
+            keep: false
         }
     ]
 }
@@ -72,31 +82,38 @@ const css = {
     options: [
         {
             human: 'Flexbox',
-            bot: 'flexbox'
+            bot: 'flexbox',
+            keep: false
         },
         {
             human: 'Seletores',
-            bot: 'selectors'
+            bot: 'selectors',
+            keep: false
         },
         {
             human: 'Design responsivo',
-            bot: 'responsive'
+            bot: 'responsive',
+            keep: false
         }, 
         {
             human: 'calc()',
-            bot: 'calc'
+            bot: 'calc',
+            keep: false
         },
         {
             human: 'Gradientes',
-            bot: 'gradients'
+            bot: 'gradients',
+            keep: false
         }, 
         {
             human: 'Eu quero receber uma curiosidade',
-            bot: 'funFactCss'
+            bot: 'funFactCss',
+            keep: false
         },
         {
             human: 'Outro assunto',
-            bot: 'something-else'
+            bot: 'something-else',
+            keep: false
         }
     ]
 }
@@ -109,23 +126,28 @@ const html = {
     options: [
         {
             human: 'Quero saber sobre um elemento específico',
-            bot: 'elem'
+            bot: 'elem',
+            keep: false
         },
         {
             human: 'Formulários',
-            bot: 'form'
+            bot: 'form',
+            keep: false
         },
         {
             human: 'ARIA',
-            bot: 'aria'
+            bot: 'aria',
+            keep: false
         },
         {
             human: 'Eu quero receber uma curiosidade',
-            bot: randomFunFact('html')
+            bot: randomFunFact('html'),
+            keep: false
         },
         {
             human: 'Outro assunto',
-            bot: 'something-else'
+            bot: 'something-else',
+            keep: false
         }
     ]
 }
@@ -142,11 +164,13 @@ const inspiration = {
     options: [
         {
             human: 'Ainda preciso de motivação...',
-            bot: 'inspiration'
+            bot: 'inspiration',
+            keep: false
         },
         {
             human: 'Por hoje está bom, valeu!',
-            bot: 'go'
+            bot: 'go',
+            keep: false
         }
     ]
 }
