@@ -39,6 +39,6 @@ O projeto se encontrará na pasta `dist`.
 
 ## Contribuindo
 
-Pull requests e issues são bem vindos. [Mais informações](/CONTRIBUTING.md)
+Pull requests e issues são bem vindas. [Mais informações aqui](/CONTRIBUTING.md).
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
