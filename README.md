@@ -6,6 +6,8 @@ ARIEL está sendo desenvolvida para compartilhar conhecimento, motivar e empoder
 * [Features](#features)
 * [Tecnologias](#tecnologias)
 * [Setup](#setup)
+* [Contribuindo](#contribuindo)
+* [License](#license)
 
 ## Features
 
